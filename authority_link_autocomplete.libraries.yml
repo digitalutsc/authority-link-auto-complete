@@ -1,0 +1,7 @@
+authority_link_autocomplete:
+  js:
+    js/authority-link-autocomplete.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+    - jquery_ui_autocomplete/autocomplete

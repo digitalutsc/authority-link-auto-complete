@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Authority Link Autocomplete module.
+ *
+ * @DCG
+ * This file is no longer required in Drupal 8.
+ * @see https://www.drupal.org/node/2217931
+ */
+
+/**
+ * Implements hook_field_widget_authority_link_default_form_alter().
+ */
+function authority_link_autocomplete_field_widget_authority_link_default_form_alter(&$element, \Drupal\Core\Form\FormStateInterface $form_state, $context) {
+  $element['title'] += [
+    '#prefix' => '<div class="title">',
+    '#suffix' => '</div>',
+  ];
+
+  $element['uri'] += [
+    '#prefix' => '<div class="url">', 
+    '#suffix' => '</div>',
+  ];
+
+  $element['source'] += [
+    '#prefix' => '<div class="source">', 
+    '#suffix' => '</div>',
+  ];
+
+  $element['#attached']['library'][] = 'authority_link_autocomplete/authority_link_autocomplete';
+}
